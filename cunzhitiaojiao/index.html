@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寸止调教-寸止调教练习节奏_寸止调教入门与进阶要点</title>
+<meta name="description" content="寸止调教主题首页：讲解寸止调教的基本节奏、练习阶段、常见误区与进阶要点，帮助访问者理解寸止调教的实际含义与操作路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1520'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23e05a7a' stroke-width='4'/%3E%3Crect x='29' y='12' width='6' height='12' rx='3' fill='%23f0c46a'/%3E%3Crect x='29' y='40' width='6' height='12' rx='3' fill='%23f0c46a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#141019;
+  --bg-soft:#1c1724;
+  --card:#221b2c;
+  --line:#352b42;
+  --text:#ece6f2;
+  --muted:#a99cb8;
+  --accent:#e05a7a;
+  --gold:#f0c46a;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(20,16,25,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:.5px}
+.logo .mark{width:34px;height:34px;flex:0 0 auto}
+.nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+.nav ul a{font-size:14.5px;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--gold)}
+.nav .cta{
+  font-size:14px;padding:8px 16px;border-radius:999px;
+  background:var(--accent);color:#fff;font-weight:600;
+  transition:filter .2s;
+}
+.nav .cta:hover{filter:brightness(1.12)}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(700px 320px at 82% 12%,rgba(224,90,122,.16),transparent 70%),
+    radial-gradient(560px 300px at 8% 88%,rgba(240,196,106,.10),transparent 70%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--gold);
+  border:1px solid rgba(240,196,106,.35);
+  background:rgba(240,196,106,.07);
+  padding:5px 14px;border-radius:999px;margin-bottom:20px;
+}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.25;letter-spacing:1px;
+  margin-bottom:18px;
+}
+h1 .hl{color:var(--accent)}
+.hero p.lead{color:var(--muted);font-size:16.5px;max-width:34em;margin-bottom:26px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;
+  font-size:15px;font-weight:600;transition:.2s;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{filter:brightness(1.12)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-art{display:flex;justify-content:center}
+.hero-art svg{width:100%;max-width:330px;height:auto}
+
+/* 数据条 */
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-top:44px;
+}
+.stat{
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px 20px;
+}
+.stat b{display:block;font-size:20px;color:var(--gold);letter-spacing:.5px}
+.stat span{font-size:13.5px;color:var(--muted)}
+
+/* 通用区块 */
+section.block{padding:60px 0}
+.sec-head{margin-bottom:34px;max-width:40em}
+.sec-head .kicker{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:600;margin-bottom:8px}
+.sec-head h2{font-size:clamp(22px,3vw,30px);line-height:1.35;margin-bottom:10px}
+.sec-head p{color:var(--muted);font-size:15px}
+
+/* 三阶段卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px 24px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(224,90,122,.5)}
+.card .num{
+  font-size:13px;font-weight:700;color:var(--bg);
+  background:var(--gold);width:30px;height:30px;border-radius:9px;
+  display:grid;place-items:center;
+}
+.card h3{font-size:18px;line-height:1.4}
+.card p{font-size:14.5px;color:var(--muted)}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--muted);margin-top:2px}
+.card ul li{padding-left:16px;position:relative}
+.card ul li::before{
+  content:"";position:absolute;left:0;top:.68em;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
+}
+
+/* 节奏讲解 双栏 */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.prose p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+.prose p strong{color:var(--text);font-weight:600}
+.rhythm-list{display:flex;flex-direction:column;gap:14px}
+.rhythm-item{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:var(--radius);padding:18px 20px;
+}
+.rhythm-item .dot{
+  flex:0 0 auto;width:10px;height:10px;border-radius:50%;
+  background:var(--accent);margin-top:.6em;
+  box-shadow:0 0 0 4px rgba(224,90,122,.15);
+}
+.rhythm-item h4{font-size:15.5px;margin-bottom:4px}
+.rhythm-item p{font-size:14px;color:var(--muted)}
+
+/* 误区 */
+.mistakes{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mistake{
+  background:var(--bg-soft);border-left:3px solid var(--gold);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:20px 22px;
+}
+.mistake h4{font-size:15.5px;margin-bottom:6px;color:var(--gold)}
+.mistake p{font-size:14.5px;color:var(--muted)}
+
+/* 进阶要点 列表 */
+.points{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.point{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+}
+.point .icon{
+  width:40px;height:40px;border-radius:11px;
+  background:rgba(224,90,122,.14);
+  display:grid;place-items:center;margin-bottom:14px;
+}
+.point h3{font-size:17px;margin-bottom:8px}
+.point p{font-size:14.5px;color:var(--muted)}
+
+/* 下载区 */
+.download{
+  background:linear-gradient(135deg,rgba(224,90,122,.14),rgba(240,196,106,.08));
+  border:1px solid var(--line);border-radius:22px;
+  padding:44px 40px;text-align:center;
+}
+.download h2{font-size:clamp(21px,2.8vw,27px);margin-bottom:12px}
+.download p{color:var(--muted);font-size:15px;max-width:36em;margin:0 auto 26px}
+.btn-download{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--accent);color:#fff;font-weight:600;font-size:15px;
+  padding:13px 34px;border-radius:999px;
+  pointer-events:none;opacity:.92;
+}
+.dl-note{font-size:12.5px;color:var(--muted);margin-top:14px}
+
+/* 页尾 */
+footer.site{
+  border-top:1px solid var(--line);
+  padding:38px 0 30px;margin-top:20px;
+  background:var(--bg-soft);
+}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot-brand{max-width:30em}
+.foot-brand .logo{margin-bottom:12px;font-size:17px}
+.foot-brand p{font-size:13.5px;color:var(--muted)}
+.foot-links{display:flex;gap:46px;flex-wrap:wrap}
+.foot-links h5{font-size:13px;color:var(--text);margin-bottom:10px;letter-spacing:1px}
+.foot-links ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.foot-links ul a{font-size:13.5px;color:var(--muted)}
+.foot-links ul a:hover{color:var(--gold)}
+.copy{
+  margin-top:30px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 响应式 */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-art{order:-1;justify-content:flex-start}
+  .hero-art svg{max-width:220px}
+  .cards{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr;gap:28px}
+  .mistakes{grid-template-columns:1fr}
+  .points{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr;gap:12px}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .nav{padding:12px 0}
+  .nav ul{gap:14px;order:3;width:100%;padding-top:10px;border-top:1px solid var(--line)}
+  .nav ul a{font-size:13.5px}
+  .hero{padding:40px 0 40px}
+  section.block{padding:44px 0}
+  .download{padding:32px 22px}
+  .foot-links{gap:30px}
+  .copy{flex-direction:column;gap:6px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="寸止调教首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#221b2c"/>
+        <circle cx="32" cy="32" r="16" fill="none" stroke="#e05a7a" stroke-width="4"/>
+        <rect x="29" y="10" width="6" height="13" rx="3" fill="#f0c46a"/>
+        <rect x="29" y="41" width="6" height="13" rx="3" fill="#f0c46a"/>
+      </svg>
+      <span>寸止调教</span>
+    </a>
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="#stages">练习阶段</a></li>
+        <li><a href="#rhythm">节奏原理</a></li>
+        <li><a href="#mistakes">常见误区</a></li>
+        <li><a href="#advanced">进阶要点</a></li>
+        <li><a href="#download">资源下载</a></li>
+      </ul>
+    </nav>
+    <a href="#stages" class="cta">从阶段开始</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="none" stroke="#f0c46a" stroke-width="1.6"/></svg>
+            节奏 · 自控 · 循序渐进
+          </span>
+          <h1>寸止调教</h1>
+          <p class="lead">寸止调教是一种以“接近临界即暂停”为核心的节奏练习方式。本页把寸止调教的阶段划分、节奏原理、常见误区与进阶要点逐层拆开，让第一次接触的人知道从哪一步开始，也让已有练习的人找到调整方向。</p>
+          <div class="hero-actions">
+            <a href="#rhythm" class="btn btn-primary">先看节奏原理</a>
+            <a href="#stages" class="btn btn-ghost">查看三个阶段</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>3 个阶段</b><span>适应 / 控制 / 稳定</span></div>
+            <div class="stat"><b>4 个误区</b><span>新手最容易踩的点</span></div>
+            <div class="stat"><b>5 条进阶</b><span>节奏、呼吸与记录</span></div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <svg viewBox="0 0 320 320" role="img" aria-label="寸止调教节奏示意：波形在临界前被截断">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e05a7a" stop-opacity=".95"/>
+                <stop offset="1" stop-color="#f0c46a" stop-opacity=".9"/>
+              </linearGradient>
+            </defs>
+            <circle cx="160" cy="160" r="128" fill="none" stroke="#352b42" stroke-width="1.5"/>
+            <circle cx="160" cy="160" r="96" fill="none" stroke="#352b42" stroke-width="1.5" stroke-dasharray="4 7"/>
+            <path d="M40 190 C70 190 78 120 104 120 S138 236 164 236 S198 96 224 96 S250 172 280 172"
+                  fill="none" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"/>
+            <line x1="164" y1="70" x2="164" y2="250" stroke="#e05a7a" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/>
+            <circle cx="164" cy="236" r="7" fill="#e05a7a"/>
+            <text x="176" y="70" fill="#a99cb8" font-size="12" font-family="sans-serif">临界</text>
+            <text x="176" y="248" fill="#f0c46a" font-size="12" font-family="sans-serif">暂停</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 练习阶段 -->
+  <section class="block" id="stages">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">练习阶段</div>
+        <h2>寸止调教的三个阶段，先站稳再提速</h2>
+        <p>寸止调教不是一上来就追求极限。把练习拆成适应、控制、稳定三段，每一段只解决一个问题，节奏自然会稳。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="num">1</span>
+          <h3>适应期：先建立身体感知</h3>
+          <p>这一阶段的目标不是“止得住”，而是准确识别临界信号，知道自己在哪个位置需要停。</p>
+          <ul>
+            <li>全程保持缓慢节奏，不追求次数</li>
+            <li>每次接近临界即停，停顿时间宁长勿短</li>
+            <li>记录每次暂停前后的身体感受</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="num">2</span>
+          <h3>控制期：学会在边缘停留</h3>
+          <p>适应之后，寸止调教的重点转向“停得住、也接得上”，练习在接近临界处稳定停留。</p>
+          <ul>
+            <li>把停顿从被动变成主动选择</li>
+            <li>用呼吸把节奏拉回平稳</li>
+            <li>逐步缩短恢复所需时间</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="num">3</span>
+          <h3>稳定期：节奏可重复</h3>
+          <p>当一次练习的结果可以被预测，寸止调教才真正进入稳定期，重点转为长期节奏管理。</p>
+          <ul>
+            <li>固定练习频率，避免忽多忽少</li>
+            <li>关注整体状态而非单次表现</li>
+            <li>出现疲劳信号立即降档</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 节奏原理 -->
+  <section class="block" id="rhythm" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="sec-head" style="margin-bottom:22px">
+            <div class="kicker">节奏原理</div>
+            <h2>为什么寸止调教的关键是“停”，不是“快”</h2>
+          </div>
+          <div class="prose">
+            <p>寸止调教的核心动作只有一个：在接近临界之前主动暂停。<strong>暂停本身就是练习内容</strong>，它让身体学会在高度兴奋时重新回到可控状态。</p>
+            <p>很多人把寸止调教理解成“忍”，其实方向相反。忍耐是被动的，节奏控制是主动的——你要清楚自己停在哪里、停多久、什么时候重新开始。</p>
+            <p>因此一次完整的寸止调教练习，至少包含三段：上升、暂停、回落。三段都走完，才算一个有效循环。只做上升不做暂停，等于没有练习。</p>
+          </div>
+        </div>
+        <div class="rhythm-list">
+          <div class="rhythm-item">
+            <span class="dot"></span>
+            <div>
+              <h4>上升段：慢而均匀</h4>
+              <p>保持稳定速度，注意力放在身体信号上，而不是时间或次数。</p>
+            </div>
+          </div>
+          <div class="rhythm-item">
+            <span class="dot"></span>
+            <div>
+              <h4>暂停段：彻底停下</h4>
+              <p>完全停止刺激，用呼吸把兴奋度往下带，等到明显回落再进入下一轮。</p>
+            </div>
+          </div>
+          <div class="rhythm-item">
+            <span class="dot"></span>
+            <div>
+              <h4>回落段：确认状态</h4>
+              <p>判断自己是否恢复到可以再次开始的程度，状态不佳就结束当次练习。</p>
+            </div>
+          </div>
+          <div class="rhythm-item">
+            <span class="dot"></span>
+            <div>
+              <h4>循环段：按轮次推进</h4>
+              <p>每一轮的暂停点和恢复时间都记录下来，后续调整才有依据。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见误区 -->
+  <section class="block" id="mistakes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">常见误区</div>
+        <h2>寸止调教新手最容易踩的四个点</h2>
+        <p>这些误区大多不是意志力问题，而是对寸止调教节奏理解的偏差。</p>
+      </div>
+      <div class="mistakes">
+        <div class="mistake">
+          <h4>误区一：把暂停当成失败</h4>
+          <p>暂停是寸止调教的正式环节，不是“没忍住”的补救。把暂停视为练习的一部分，节奏才不会被情绪带乱。</p>
+        </div>
+        <div class="mistake">
+          <h4>误区二：追求单次轮数</h4>
+          <p>轮数多不等于练得好。寸止调教看的是每一轮的稳定程度，盲目加轮数只会让后面几轮失去控制。</p>
+        </div>
+        <div class="mistake">
+          <h4>误区三：忽略恢复时间</h4>
+          <p>暂停后立刻重启，等于跳过了回落段。恢复时间不足，寸止调教就退化成单纯的刺激叠加。</p>
+        </div>
+        <div class="mistake">
+          <h4>误区四：不做记录</h4>
+          <p>没有记录就没有对比。寸止调教的进步往往很细微，靠回忆很难判断，写下来才知道哪里变了。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 进阶要点 -->
+  <section class="block" id="advanced" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">进阶要点</div>
+        <h2>把寸止调教练成可重复的节奏</h2>
+        <p>当基础阶段走顺之后，可以从下面几个方向继续打磨。</p>
+      </div>
+      <div class="points">
+        <div class="point">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 14 L8 6 L12 11 L17 4" fill="none" stroke="#e05a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>呼吸配合节奏</h3>
+          <p>暂停时用缓慢的腹式呼吸把兴奋度往下带，比单纯等待更有效。呼吸节奏稳定，寸止调教的整体节奏也会更稳。</p>
+        </div>
+        <div class="point">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" fill="none" stroke="#f0c46a" stroke-width="2"/><path d="M7 10 L9.5 12.5 L13.5 7.5" fill="none" stroke="#f0c46a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>固定练习时段</h3>
+          <p>把寸止调教安排在状态稳定的时段，避开疲劳、情绪波动或时间紧张的时候，练习质量比频率更重要。</p>
+        </div>
+        <div class="point">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="#e05a7a" stroke-width="2"/><path d="M10 6 V10 L13 12" fill="none" stroke="#e05a7a" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>记录暂停点位置</h3>
+          <p>用简单的等级描述记录每轮暂停的位置，几周后回看，就能看出自己的临界判断是否变得更准确。</p>
+        </div>
+        <div class="point">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 V8 M10 16 V4 M16 16 V11" fill="none" stroke="#f0c46a" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </div>
+          <h3>随时可以降档</h3>
+          <p>状态不好时降低强度或直接结束，是寸止调教的一部分。硬撑不会带来进步，只会打乱后面的节奏。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section class="block" id="download">
+    <div class="wrap">
+      <div class="download">
+        <h2>寸止调教练习记录表</h2>
+        <p>包含阶段划分、每轮暂停点与恢复时间三栏，用于记录寸止调教的练习过程，方便回看节奏变化。当前版本为页面内置资源，下载入口将在资源就绪后开放。</p>
+        <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V10 M4.5 7 L8 10.5 L11.5 7 M3 13 H13" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          下载
+        </a>
+        <div class="dl-note">记录表为辅助工具，练习前请先阅读节奏原理与常见误区。</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#221b2c"/>
+            <circle cx="32" cy="32" r="16" fill="none" stroke="#e05a7a" stroke-width="4"/>
+            <rect x="29" y="10" width="6" height="13" rx="3" fill="#f0c46a"/>
+            <rect x="29" y="41" width="6" height="13" rx="3" fill="#f0c46a"/>
+          </svg>
+          <span>寸止调教</span>
+        </div>
+        <p>寸止调教主题首页，围绕节奏控制、阶段练习与长期记录展开，帮助访问者理解寸止调教的实际做法，并以稳定、可重复的方式推进练习。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h5>内容栏目</h5>
+          <ul>
+            <li><a href="#stages">练习阶段</a></li>
+            <li><a href="#rhythm">节奏原理</a></li>
+            <li><a href="#mistakes">常见误区</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>继续阅读</h5>
+          <ul>
+            <li><a href="#advanced">进阶要点</a></li>
+            <li><a href="#download">练习记录表</a></li>
+            <li><a href="#top">回到顶部</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2024 寸止调教 · 主题首页</span>
+      <span>内容为节奏练习经验整理，请结合自身状态合理安排。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                      </html>
