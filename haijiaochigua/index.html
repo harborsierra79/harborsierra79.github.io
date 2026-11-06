@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海角吃瓜-海角吃瓜热点合集_海角吃瓜爆料入口</title>
+<meta name="description" content="海角吃瓜首页汇总热门讨论与网络爆料线索，按话题分区浏览最新热点，提供清晰的阅读路径与入口说明。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1030'/%3E%3Ccircle cx='32' cy='26' r='11' fill='%23ffb648'/%3E%3Cpath d='M8 58c4-14 12-20 24-20s20 6 24 20z' fill='%23ff5d73'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#120c1f;
+  --bg2:#1b1230;
+  --card:#231a3b;
+  --card2:#2b2049;
+  --line:rgba(255,255,255,.10);
+  --txt:#efe9fb;
+  --muted:#b6abd0;
+  --hot:#ff5d73;
+  --gold:#ffb648;
+  --mint:#5be0c4;
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(255,93,115,.18), transparent 60%),
+    radial-gradient(700px 420px at 5% 0%, rgba(91,224,196,.12), transparent 60%),
+    var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
+img,svg{display:block;}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(18,12,31,.82);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;gap:22px;
+  min-height:66px;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;white-space:nowrap;}
+.logo .mark{width:30px;height:30px;flex:0 0 auto;}
+nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+nav.main a{
+  font-size:14.5px;color:var(--muted);padding:7px 12px;border-radius:999px;
+  transition:.2s;
+}
+nav.main a:hover,nav.main a.on{color:#fff;background:rgba(255,255,255,.09);}
+
+/* 首屏 */
+.hero{padding:56px 0 44px;position:relative;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;}
+.tagline{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--gold);
+  border:1px solid rgba(255,182,72,.4);
+  background:rgba(255,182,72,.08);
+  padding:4px 12px;border-radius:999px;margin-bottom:18px;
+}
+.tagline .dot{width:7px;height:7px;border-radius:50%;background:var(--hot);box-shadow:0 0 0 4px rgba(255,93,115,.18);}
+h1{
+  font-size:clamp(30px,5.2vw,50px);
+  line-height:1.18;margin:0 0 16px;letter-spacing:1px;
+  background:linear-gradient(100deg,#fff 20%,#ffd8a8 55%,#ff8fa0 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{font-size:16px;color:var(--muted);margin:0 0 26px;max-width:46ch;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:999px;font-size:15px;font-weight:700;
+  border:1px solid transparent;transition:.2s;cursor:pointer;
+}
+.btn-primary{background:linear-gradient(100deg,var(--hot),#ff8a5b);color:#2a0c14;box-shadow:0 10px 26px rgba(255,93,115,.28);}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-ghost{border-color:var(--line);color:var(--txt);background:rgba(255,255,255,.04);}
+.btn-ghost:hover{background:rgba(255,255,255,.09);}
+.hero-art{
+  background:linear-gradient(160deg,var(--card2),var(--card));
+  border:1px solid var(--line);border-radius:24px;
+  padding:18px;position:relative;overflow:hidden;
+}
+.hero-art::after{
+  content:"";position:absolute;inset:auto -30px -60px auto;width:180px;height:180px;
+  background:radial-gradient(circle,rgba(91,224,196,.35),transparent 70%);filter:blur(6px);
+}
+.hero-art svg{width:100%;height:auto;border-radius:16px;position:relative;z-index:1;}
+.art-cap{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;position:relative;z-index:1;}
+
+/* 通用区块 */
+section{padding:44px 0;}
+.sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:26px;flex-wrap:wrap;}
+.sec-head h2{font-size:23px;margin:0;letter-spacing:.5px;}
+.sec-head h2 span{color:var(--hot);}
+.sec-head p{margin:0;font-size:14px;color:var(--muted);}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);}
+
+/* 热点卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.card{
+  background:linear-gradient(170deg,var(--card2),var(--card));
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;display:flex;flex-direction:column;gap:10px;
+  transition:.22s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,93,115,.45);}
+.card .meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
+.pill{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:700;}
+.pill.red{background:rgba(255,93,115,.15);color:#ff9aa8;}
+.pill.mint{background:rgba(91,224,196,.14);color:#8ff0dc;}
+.pill.gold{background:rgba(255,182,72,.14);color:#ffcf85;}
+.card h3{font-size:16.5px;margin:0;line-height:1.5;}
+.card p{font-size:14px;color:var(--muted);margin:0;flex:1;}
+.card .go{font-size:13.5px;color:var(--gold);font-weight:700;}
+
+/* 两栏内容 */
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start;}
+.prose h3{font-size:17.5px;margin:26px 0 10px;}
+.prose h3:first-child{margin-top:0;}
+.prose p{font-size:15px;color:#d7cfe8;margin:0 0 14px;}
+.prose strong{color:var(--gold);font-weight:700;}
+
+/* 侧栏 */
+.aside{
+  background:linear-gradient(170deg,var(--card2),var(--card));
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+}
+.aside h3{font-size:15.5px;margin:0 0 14px;display:flex;align-items:center;gap:8px;}
+.aside h3::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--hot);}
+.rank{list-style:none;margin:0;padding:0;counter-reset:r;}
+.rank li{
+  counter-increment:r;display:flex;gap:12px;align-items:flex-start;
+  padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.rank li:last-child{border-bottom:none;}
+.rank li::before{
+  content:counter(r);flex:0 0 22px;height:22px;line-height:22px;text-align:center;
+  font-size:12px;font-weight:800;border-radius:6px;
+  background:rgba(255,255,255,.08);color:var(--muted);
+}
+.rank li:nth-child(1)::before{background:var(--hot);color:#2a0c14;}
+.rank li:nth-child(2)::before{background:var(--gold);color:#2a1a02;}
+.rank li:nth-child(3)::before{background:var(--mint);color:#06241e;}
+.rank a:hover{color:var(--gold);}
+.rank span{display:block;font-size:12px;color:var(--muted);margin-top:2px;}
+
+/* 筛选 */
+.toolbar{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;margin-bottom:22px;
+}
+.toolbar label{font-size:13.5px;color:var(--muted);}
+.toolbar input[type=search]{
+  flex:1;min-width:180px;padding:10px 14px;border-radius:10px;
+  border:1px solid var(--line);background:var(--bg2);color:var(--txt);
+  font-size:14px;font-family:inherit;outline:none;
+}
+.toolbar input[type=search]:focus{border-color:var(--hot);}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  font-size:13px;padding:6px 14px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);
+  font-family:inherit;transition:.18s;
+}
+.chip:hover{color:#fff;}
+.chip.on{background:rgba(255,93,115,.16);border-color:rgba(255,93,115,.5);color:#ff9aa8;font-weight:700;}
+.empty{font-size:14px;color:var(--muted);padding:26px 4px;display:none;}
+.empty.show{display:block;}
+
+/* 列表条目 */
+.feed{display:grid;gap:14px;}
+.item{
+  display:grid;grid-template-columns:60px 1fr auto;gap:16px;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;transition:.2s;
+}
+.item:hover{border-color:rgba(91,224,196,.4);background:var(--card2);}
+.item .ic{
+  width:60px;height:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,93,115,.12);
+}
+.item .ic svg{width:28px;height:28px;}
+.item h4{margin:0 0 4px;font-size:15.5px;}
+.item p{margin:0;font-size:13.5px;color:var(--muted);}
+.item .time{font-size:12.5px;color:var(--muted);white-space:nowrap;}
+
+/* 说明区 */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.note{
+  background:rgba(255,255,255,.03);border:1px solid var(--line);
+  border-radius:var(--radius);padding:20px;
+}
+.note h4{margin:0 0 8px;font-size:15px;display:flex;align-items:center;gap:8px;}
+.note h4 .num{
+  width:22px;height:22px;border-radius:50%;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--gold);color:#2a1a02;
+}
+.note p{margin:0;font-size:13.5px;color:var(--muted);}
+
+/* 页尾 */
+footer.site{
+  border-top:1px solid var(--line);margin-top:24px;
+  padding:34px 0 40px;background:rgba(0,0,0,.2);
+}
+.foot-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start;}
+.foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;margin-bottom:10px;}
+.foot-brand svg{width:26px;height:26px;}
+.foot-txt{font-size:13px;color:var(--muted);max-width:44ch;margin:0;}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);}
+.foot-links a:hover{color:var(--gold);}
+.copy{font-size:12.5px;color:#8b81a5;margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);}
+
+@media (max-width:900px){
+  .hero-grid,.split{grid-template-columns:1fr;gap:28px;}
+  .cards,.notes{grid-template-columns:1fr 1fr;}
+  .hero-art{order:-1;}
+}
+@media (max-width:640px){
+  .nav-inner{gap:12px;padding:10px 0;}
+  nav.main{margin-left:0;width:100%;gap:4px;}
+  nav.main a{font-size:13px;padding:6px 10px;}
+  .hero{padding:34px 0 26px;}
+  .hero p.lead{font-size:14.5px;}
+  .cards,.notes{grid-template-columns:1fr;}
+  .item{grid-template-columns:44px 1fr;}
+  .item .ic{width:44px;height:44px;border-radius:10px;}
+  .item .ic svg{width:22px;height:22px;}
+  .item .time{grid-column:2;font-size:12px;}
+  section{padding:32px 0;}
+  .sec-head h2{font-size:20px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top" aria-label="海角吃瓜 首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#231a3b"/>
+        <circle cx="32" cy="25" r="10" fill="#ffb648"/>
+        <path d="M9 57c4-13 12-19 23-19s19 6 23 19z" fill="#ff5d73"/>
+        <circle cx="46" cy="15" r="4" fill="#5be0c4"/>
+      </svg>
+      海角吃瓜
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#hot" class="on">热门合集</a>
+      <a href="#feed">最新线索</a>
+      <a href="#read">阅读路径</a>
+      <a href="#notice">使用说明</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tagline"><span class="dot"></span>热点内容聚合 · 每日更新线索</span>
+        <h1>海角吃瓜</h1>
+        <p class="lead">把散落在各处的热门讨论收拢到一处。海角吃瓜以话题分区的方式呈现网络爆料与围观热点，让你先看清脉络，再决定要不要细读。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#hot">
+            进入热门合集
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#feed">浏览最新线索</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 360 220" role="img" aria-label="海角吃瓜话题分区示意图">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff5d73"/><stop offset="1" stop-color="#ffb648"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="360" height="220" rx="14" fill="#1b1230"/>
+          <circle cx="300" cy="40" r="46" fill="url(#g1)" opacity=".22"/>
+          <rect x="22" y="30" width="150" height="14" rx="7" fill="#ff5d73" opacity=".85"/>
+          <rect x="22" y="56" width="104" height="10" rx="5" fill="#ffffff" opacity=".22"/>
+          <rect x="22" y="86" width="140" height="52" rx="10" fill="#2b2049"/>
+          <rect x="34" y="100" width="70" height="8" rx="4" fill="#ffb648" opacity=".85"/>
+          <rect x="34" y="116" width="106" height="6" rx="3" fill="#ffffff" opacity=".2"/>
+          <rect x="176" y="86" width="162" height="24" rx="8" fill="#2b2049"/>
+          <rect x="176" y="120" width="162" height="24" rx="8" fill="#2b2049"/>
+          <rect x="176" y="154" width="162" height="24" rx="8" fill="#2b2049"/>
+          <circle cx="192" cy="98" r="5" fill="#5be0c4"/>
+          <circle cx="192" cy="132" r="5" fill="#ff5d73"/>
+          <circle cx="192" cy="166" r="5" fill="#ffb648"/>
+          <rect x="206" y="94" width="90" height="8" rx="4" fill="#ffffff" opacity=".26"/>
+          <rect x="206" y="128" width="112" height="8" rx="4" fill="#ffffff" opacity=".26"/>
+          <rect x="206" y="162" width="74" height="8" rx="4" fill="#ffffff" opacity=".26"/>
+        </svg>
+        <p class="art-cap">话题分区示意：先看标题，再看摘要，最后进入正文</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门合集 -->
+  <section id="hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>热门 <span>合集</span></h2>
+        <p>按讨论热度归类的围观话题，每张卡片对应一条独立线索</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="meta"><span class="pill red">热议</span><span>围观视角</span></div>
+          <h3>评论区里正在发酵的争议</h3>
+          <p>一条帖子引发的多方回应，先看时间顺序，再判断哪一方说法出现了前后矛盾。</p>
+          <span class="go">查看线索 →</span>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="pill mint">新线索</span><span>图文整理</span></div>
+          <h3>被反复转发的截图来源</h3>
+          <p>同一张图在不同账号下出现多个版本，海角吃瓜把最早出现的记录排在前面便于比对。</p>
+          <span class="go">查看线索 →</span>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="pill gold">回看</span><span>事件脉络</span></div>
+          <h3>从一句发言到全网讨论</h3>
+          <p>把零散发言按日期串起来，看清话题是如何一步步扩大的，而不是只记住最后一句。</p>
+          <span class="go">查看线索 →</span>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="pill red">热议</span><span>观点对照</span></div>
+          <h3>两种说法各自的依据</h3>
+          <p>支持与质疑并列呈现，标注每条依据的出处类型，方便读者自行判断可信程度。</p>
+          <span class="go">查看线索 →</span>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="pill mint">新线索</span><span>短记录</span></div>
+          <h3>深夜更新的一段回应</h3>
+          <p>回应发出后讨论方向发生变化，摘要保留原话关键句，避免二手转述带来的偏差。</p>
+          <span class="go">查看线索 →</span>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="pill gold">回看</span><span>旧帖重提</span></div>
+          <h3>被翻出的早期内容</h3>
+          <p>旧内容在新语境下被重新解读，海角吃瓜区分原始发布时间与再次传播时间。</p>
+          <span class="go">查看线索 →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- 阅读路径 + 排行 -->
+  <section id="read">
+    <div class="wrap split">
+      <div class="prose">
+        <h3>海角吃瓜怎么读更省时间</h3>
+        <p>围观热点最怕被情绪带着走。海角吃瓜的页面结构刻意把「标题—摘要—正文」分开：标题告诉你发生了什么，摘要给出关键事实，正文才展开细节。先花十秒扫标题，再决定哪几条值得往下读。</p>
+        <p><strong>先看时间，再看立场。</strong>同一件事在不同时间点的说法可能完全不同。我们在条目里标注发布与更新时间，遇到时间线混乱的内容，会优先提示读者注意版本差异，而不是直接下结论。</p>
+        <p><strong>区分转述与原话。</strong>大量讨论来自二手转述，转述过程中细节容易走样。海角吃瓜尽量保留原话关键句，并在摘要中说明信息来源类型，让读者知道自己在看的是原始记录还是他人总结。</p>
+        <h3>哪些内容适合收藏回看</h3>
+        <p>事件脉络类内容适合收藏：当话题再次升温时，回看早期整理能快速补齐背景。观点对照类内容适合反复阅读，因为随着新信息出现，双方的依据权重会发生变化。</p>
+        <p>如果你只想快速了解一件事的来龙去脉，建议从「回看」标签的条目入手；如果你想跟进正在发酵的讨论，则优先打开「热议」与「新线索」。</p>
+      </div>
+      <aside class="aside" aria-label="本周围观排行">
+        <h3>本周围观排行</h3>
+        <ol class="rank">
+          <li><a href="#hot">评论区争议持续升温<span>讨论量居首 · 多方回应</span></a></li>
+          <li><a href="#hot">截图来源比对有新进展<span>版本差异被逐条标注</span></a></li>
+          <li><a href="#hot">早期内容被重新翻出<span>旧帖新读 · 时间线清晰</span></a></li>
+          <li><a href="#feed">深夜回应改变讨论方向<span>原话关键句已保留</span></a></li>
+          <li><a href="#feed">两种说法的依据对照<span>出处类型分类呈现</span></a></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- 最新线索 -->
+  <section id="feed">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>最新 <span>线索</span></h2>
+        <p>按标签筛选，或直接搜索标题关键词</p>
+      </div>
+
+      <div class="toolbar">
+        <label for="q">搜索</label>
+        <input type="search" id="q" placeholder="输入关键词，例如：截图、回应、时间线" autocomplete="off">
+        <div class="chips" role="group" aria-label="标签筛选">
+          <button class="chip on" data-tag="all" type="button">全部</button>
+          <button class="chip" data-tag="热议" type="button">热议</button>
+          <button class="chip" data-tag="新线索" type="button">新线索</button>
+          <button class="chip" data-tag="回看" type="button">回看</button>
+        </div>
+      </div>
+
+      <div class="feed" id="feed-list">
+        <article class="item" data-tag="热议" data-key="评论区 争议 回应 多方">
+          <div class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-3.8-.8L3 21l1.8-5.2A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+          </div>
+          <div>
+            <h4>评论区争议：多方回应的时间顺序</h4>
+            <p>把各方回应按发布先后排列，标出其中前后说法不一致的位置。</p>
+          </div>
+          <span class="time">今日更新</span>
+        </article>
+
+        <article class="item" data-tag="新线索" data-key="截图 来源 版本 比对">
+          <div class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8ff0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 15l5-5 4 4 3-3 6 6"/><circle cx="9" cy="9" r="1.6"/></svg>
+          </div>
+          <div>
+            <h4>截图来源比对：最早版本出现在哪里</h4>
+            <p>同一张图存在多个流传版本，摘要列出可核对的差异点。</p>
+          </div>
+          <span class="time">2 小时前</span>
+        </article>
+
+        <article class="item" data-tag="回看" data-key="时间线 脉络 早期 内容">
+          <div class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ffcf85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </div>
+          <div>
+            <h4>事件脉络：从一句发言到全网讨论</h4>
+            <p>按日期串起关键节点，区分原始发布与再次传播的时间。</p>
+          </div>
+          <span class="time">昨日</span>
+        </article>
+
+        <article class="item" data-tag="热议" data-key="观点 对照 依据 出处">
+          <div class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h7M4 12h7M4 18h7M15 6h5M15 12h5M15 18h5"/></svg>
+          </div>
+          <div>
+            <h4>观点对照：两种说法的依据分别是什么</h4>
+            <p>并列呈现双方依据，并标注每条依据属于原话、转述还是截图。</p>
+          </div>
+          <span class="time">昨日</span>
+        </article>
+
+        <article class="item" data-tag="新线索" data-key="回应 深夜 原话 关键句">
+          <div class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8ff0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M3 21h18"/></svg>
+          </div>
+          <div>
+            <h4>深夜回应：讨论方向为何发生变化</h4>
+            <p>保留回应中的关键原句，便于读者判断与此前说法的差别。</p>
+          </div>
+          <span class="time">3 天前</span>
+        </article>
+
+        <article class="item" data-tag="回看" data-key="旧帖 重提 再传播 语境">
+          <div class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ffcf85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+          </div>
+          <div>
+            <h4>旧帖重提：早期内容在新语境下的读法</h4>
+            <p>区分内容最初发布的时间与本次被再次转发的起点。</p>
+          </div>
+          <span class="time">4 天前</span>
+        </article>
+      </div>
+      <p class="empty" id="empty">没有匹配的线索，试试其他关键词或切换标签。</p>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- 使用说明 -->
+  <section id="notice">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>使用 <span>说明</span></h2>
+        <p>关于内容边界与阅读方式的三点提示</p>
+      </div>
+      <div class="notes">
+        <div class="note">
+          <h4><span class="num">1</span>内容定位</h4>
+          <p>海角吃瓜是围观类内容聚合页，只做线索归集与阅读引导，不生产原始信息，也不替代任何一方的正式说明。</p>
+        </div>
+        <div class="note">
+          <h4><span class="num">2</span>信息判断</h4>
+          <p>页面中的摘要与标签反映整理时的公开状态。事件后续若有新说法，旧条目的结论可能不再成立，阅读时请留意时间标注。</p>
+        </div>
+        <div class="note">
+          <h4><span class="num">3</span>理性围观</h4>
+          <p>讨论热度不等于事实成立。海角吃瓜建议先核对原话与出处，再表达看法，避免把转述当成结论继续传播。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#2b2049"/>
+            <circle cx="32" cy="25" r="10" fill="#ffb648"/>
+            <path d="M9 57c4-13 12-19 23-19s19 6 23 19z" fill="#ff5d73"/>
+            <circle cx="46" cy="15" r="4" fill="#5be0c4"/>
+          </svg>
+          海角吃瓜
+        </div>
+        <p class="foot-txt">海角吃瓜聚焦网络热门讨论与爆料线索，用分区、标签和时间标注帮助读者快速看清一件事的来龙去脉。</p>
+      </div>
+      <div class="foot-links">
+        <a href="#hot">热门合集</a>
+        <a href="#feed">最新线索</a>
+        <a href="#read">阅读路径</a>
+        <a href="#notice">使用说明</a>
+      </div>
+    </div>
+    <p class="copy">© 2025 海角吃瓜 · 内容为公开讨论线索归集，观点与事实以原始出处为准。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('#feed-list .item'));
+  var empty = document.getElementById('empty');
+  var activeTag = 'all';
+
+  function apply(){
+    var kw = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(el){
+      var tagOk = activeTag === 'all' || el.getAttribute('data-tag') === activeTag;
+      var text = (el.getAttribute('data-key') + ' ' + el.textContent).toLowerCase();
+      var kwOk = !kw || text.indexOf(kw) !== -1;
+      var ok = tagOk && kwOk;
+      el.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    empty.classList.toggle('show', shown === 0);
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on');
+      activeTag = c.getAttribute('data-tag');
+      apply();
+    });
+  });
+  q.addEventListener('input', apply);
+})();
+</script>
+</body>
+  </html>
